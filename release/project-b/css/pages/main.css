@@ -1,0 +1,315 @@
+section#hero {
+  overflow: hidden;
+}
+section#hero .levels {
+  position: relative;
+}
+section#hero .levels .background img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center center;
+     object-position: center center;
+}
+section#hero .levels .level1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+section#hero .levels .level1 .copter-wrapper {
+  animation: glide 4s ease-in-out infinite;
+}
+section#hero .levels .level2 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+}
+@media (max-width: 650px) {
+  section#hero .levels .level1, section#hero .levels .level2 {
+    transform: none !important;
+  }
+}
+section#hero-points {
+  background-image: linear-gradient(to bottom, #fbfbfb, #ebebeb);
+  padding: 2vmax 0;
+}
+section#hero-points .hero-point {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+@media (max-width: 1000px) and (min-width: 600px) {
+  section#hero-points .hero-point {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+section#hero-points .hero-point .icon-wrapper {
+  width: 110px;
+  flex-shrink: 0;
+}
+@media (max-width: 600px) {
+  section#hero-points .hero-point .icon-wrapper {
+    width: 64px;
+  }
+}
+section#hero-points .hero-point .name {
+  max-width: 300px;
+}
+section#skills {
+  text-align: center;
+}
+section#parallax {
+  padding-top: 20vmax;
+  padding-bottom: 0;
+  background-image: url("../../img/parallax1_5x.webp");
+  background-size: 100vw auto;
+}
+@media (max-width: 800px) {
+  section#parallax {
+    background-position: left center !important;
+    background-size: cover;
+  }
+}
+section#parallax .row {
+  margin: 0;
+}
+section#parallax .content-wrapper {
+  padding: clamp(0.5rem, 3vw, 3rem);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+section#parallax .content-wrapper h2 {
+  margin-top: 0;
+}
+section#numbers {
+  text-align: center;
+}
+section#numbers .number-wrapper .number {
+  font-weight: bold;
+  color: #0E5A67;
+  font-size: clamp(26px, 3vw, 64px);
+}
+section#carrier {
+  position: relative;
+  overflow: hidden;
+}
+section#carrier .swiper-slide .img-wrapper {
+  margin-right: calc(-50vw + 102%);
+}
+section#carrier dt {
+  border-top: 1px solid #ccc;
+  padding: 0.5em;
+}
+section#carrier dt:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+section#carrier dl {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+section#carrier .navigation {
+  position: absolute;
+  z-index: 3;
+  left: calc(50% + 10px);
+  transform: translateX(-100%);
+  bottom: 10vw;
+  display: flex;
+  background-color: #0E5A67;
+}
+section#carrier .navigation a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  color: #fff;
+  transition: background-color 0.2s, color 0.2s;
+}
+section#carrier .navigation a.swiper-button-disabled {
+  color: rgba(255, 255, 255, 0.2);
+  pointer-events: none;
+}
+section#carrier .navigation a:before {
+  transition: transform 0.2s;
+}
+section#carrier .navigation a:hover {
+  background-color: rgba(255, 255, 255, 0.1333333333);
+}
+section#carrier .navigation a:hover:before {
+  transform: scale(1.5);
+}
+@media (max-width: 1200px) {
+  section#carrier .navigation {
+    display: none;
+  }
+}
+section#carrier .fractions {
+  height: 5rem;
+  position: absolute;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 10vw;
+  left: calc(50% + 10px);
+  z-index: 3;
+  background-color: #fff;
+  width: 10rem;
+}
+@media (max-width: 1200px) {
+  section#carrier .fractions {
+    display: none;
+  }
+}
+section#carrier details {
+  border-top: 1px solid #ccc;
+}
+section#carrier details:last-of-type {
+  border-bottom: 1px solid #ccc;
+}
+section#carrier summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  padding: 0 1rem;
+}
+section#carrier summary:hover {
+  background-color: rgba(0, 0, 0, 0.0196078431);
+}
+section#carrier .summary-content img {
+  width: 500px;
+  aspect-ratio: 4/2.5;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100%;
+}
+@media (min-width: 1200px) {
+  section#carrier .mobile-accordion {
+    display: none;
+  }
+}
+section#univercity {
+  text-align: center;
+  position: relative;
+}
+section#univercity:before {
+  content: "";
+  display: block;
+  background-image: url("../../img/possibility-background.svg");
+  background-position: top center;
+  background-size: cover;
+  max-height: 60vh;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+}
+section#univercity h2 {
+  color: #fff;
+}
+section#univercity .row.flex .col {
+  margin-bottom: 20px;
+}
+section#univercity .possibility-card {
+  background-color: #fff;
+  height: 100%;
+  padding: clamp(15px, 4vw, 36px);
+  box-sizing: border-box;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+section#univercity .possibility-card p {
+  font-size: clamp(16px, 2vw, 18px);
+}
+section#univercity .possibility-card img {
+  border-radius: 50%;
+  margin: auto;
+  width: 50%;
+}
+section#government h2 {
+  text-align: center;
+}
+@media (min-width: 1000px) {
+  section#government h2 {
+    padding: 0 5vw;
+  }
+}
+section#government .government-card {
+  display: flex;
+  gap: 5%;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+section#government .government-card .data-wrapper {
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 320px) {
+  section#government .government-card {
+    flex-direction: column;
+  }
+}
+section#contacts {
+  padding: 0;
+  overflow: hidden;
+}
+section#contacts .row, section#contacts .col {
+  margin: 0;
+}
+section#contacts .map-wrapper {
+  aspect-ratio: 1/1;
+  margin-right: calc(-50vw + 93.5%);
+}
+section#contacts .map-wrapper #map {
+  background-color: #ccc;
+  width: 100%;
+  height: 100%;
+}
+section#contacts dt {
+  display: flex;
+  gap: 0.5rem;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+section#contacts dt i {
+  font-size: 32px;
+}
+section#contacts dt span {
+  font-size: clamp(18px, 1.5vmax, 24px);
+}
+@media (max-width: 850px) {
+  section#contacts {
+    padding-bottom: 4vmax;
+  }
+  section#contacts .contacts-wrapper {
+    order: 1;
+  }
+  section#contacts .map-wrapper {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+  section#contacts .map-wrapper #map {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes glide {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2vmax);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

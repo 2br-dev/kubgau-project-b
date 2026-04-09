@@ -1,0 +1,11 @@
+@use './parts/custom_grid';
+@use './parts/sidenav';
+@use './parts/typography';
+@use './parts/common';
+@use './parts/normalize';
+
+@use './parts/header';
+@use './parts/footer';
+
+
+@import url('https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css');

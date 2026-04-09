@@ -1,0 +1,150 @@
+@use './vars' as v;
+@use 'sass:color';
+
+footer{
+	background-color: v.$secondary;
+	padding: 4vmax 3rem;
+	text-align: center;
+	color: #fff;
+	overflow: hidden;
+
+	@media(max-width: 600px){
+		padding: 4vmax 0.5rem;
+	}
+
+	& a{
+		color: #fff;
+		text-decoration: none;
+	}
+
+	& .row{
+		margin-bottom: 0;
+	}
+
+	& .bttn, .bttn-outlined{
+		border-radius: 0;
+		text-align: left;
+
+		@media(max-width: 550px){
+			width: 300px;
+			max-width: 60%;
+		}
+	}
+
+	& .bttn{
+		border-color: #eee;
+		background-color: #eee;
+		color: #515151;
+		padding: .75em 1.25em;
+		display: inline-flex;
+		flex-direction: column;
+		line-height: 1em;
+		align-items: flex-start;
+		gap: 0;
+
+		& i{
+			font-size: clamp(12px, 1.3vw, 14px);
+			font-style: normal;
+			color: v.$fogged;
+		}
+
+		&:hover{
+			background-color: #fff;
+			border-color: #fff;
+		}
+	}
+
+	& .address{
+		width: 1200px;
+		margin: auto;
+		max-width: 90%;
+	}
+
+	& .bttn-outlined{
+		border-color: #eee;
+		color: #eee;
+		gap: 0;
+		flex-direction: column;
+		align-items: flex-start;
+
+		& i{
+			font-size: clamp(12px, 1.3vw, 14px);
+			font-style: normal;
+			color: rgba(#fff, .7);
+		}
+
+		&:hover{
+			color: #fff;
+			border-color: #fff;
+			background-color: rgba(#fff, .05);
+		}
+
+		@media(max-width: 800px){
+
+			& .explain{
+				display: none;
+			}
+		}
+
+		@media(max-width: 460px){
+
+			& .explain2{
+				display: none;
+			}
+		}
+	}
+
+	& .buttons-wrapper{
+		display: flex;
+		gap: 1rem;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	& .credits{
+
+		& .icon{
+			width: 3em;
+			max-width: unset;
+			text-align: center;
+
+			&:before{
+				width: 3em;
+			}
+		}
+	}
+}
+
+.footer-copyright{
+
+	padding: 1rem 0;
+	background-color: color.adjust(v.$secondary, $lightness: -10%);
+
+	& .footer-links{
+		display: flex;
+		justify-content: space-between;
+
+		@media(max-width: 450px){
+			flex-direction: column;
+			text-align: center;
+			gap: .5rem;
+		}
+
+		& a{
+			color: #fff;
+			text-decoration: none;
+			font-size: clamp(16px, 2vw, 18px);
+
+			&:hover{
+				text-decoration: underline;
+			}
+
+			& span{
+
+				@media(max-width: 600px){
+					display: none;
+				}
+			}
+		}
+	}
+}

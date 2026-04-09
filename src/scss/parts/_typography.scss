@@ -1,0 +1,51 @@
+// Подключение шрифта иконок
+@use './icons';
+@use './vars' as v;
+
+// Инициализация системных шрифтов
+@font-face {
+	font-family: 'TT Travels Text';
+	src: url('../fonts/TT_Travels_Text_Regular.woff2') format('woff2');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'TT Travels Text';
+	src: url('../fonts/TT_Travels_Text_Bold.woff2') format('woff2');
+	font-weight: bold;
+}
+
+body{
+	font-family: 'TT Travels Text';
+	color: v.$text;
+
+	& h1{
+		font-size: clamp(26px, 4vw, 84px);
+		font-weight: normal;
+		line-height: 1.2em;
+
+		& strong{
+			font-weight: normal;
+			color: v.$primary;
+		}
+	}
+	
+	& h2, & .h2{
+		font-size: clamp(26px, 3vw, 64px);
+		font-weight: normal;
+		margin: .5em 0;
+		display: block;
+		font-weight: normal;
+
+		& strong{
+			font-weight: normal;
+			color: v.$primary;
+		}
+	}
+
+	& h3{
+		font-weight: normal;
+	}
+
+	font-size: clamp(16px, 1.3vw, 22px);
+}

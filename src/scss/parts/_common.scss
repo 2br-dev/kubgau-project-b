@@ -1,0 +1,122 @@
+@use './vars' as v;
+@use 'sass:color';
+
+html{
+	scroll-behavior: smooth;
+}
+
+details {
+	
+	// Псевдоэлемент, отвечающий за всё содержимое под summary
+	&::details-content {
+		height: 0;
+		overflow: hidden;
+		opacity: 0;
+		/* transition-behavior: allow-discrete позволяет анимировать 
+       переключение видимости контента */
+		transition:
+			height 0.4s ease,
+			opacity 0.4s ease,
+			content-visibility 1s allow-discrete;
+	}
+
+	&[open]::details-content {
+		height: auto;
+		opacity: 1;
+	}
+
+	// Дополнительно: чтобы Grid внутри не ломал анимацию,
+	// убираем display: grid с самого details, если он там был
+	display: block;
+}
+
+.bttn{
+	display: inline-flex;
+	gap: .5em;
+	align-items: center;
+	padding: .4em 1.25em;
+	border-radius: 2em;
+	text-decoration: none;
+	background-color: v.$accent;
+	border: 1px solid v.$accent;
+	transition: background-color .2s, color .2s, box-shadow .2s, border-color .2s;
+	color: #fff;
+
+	& .icon{
+		font-size: 1.8em;
+	}
+
+	&:hover{
+		background-color: color.adjust(v.$accent, $lightness: 15%, $saturation: 20%);
+		border-color: color.adjust(v.$accent, $lightness: 15%, $saturation: 20%);
+	}
+
+	&-outlined{
+		@extend .bttn;
+		background-color: transparent;
+		color: v.$accent;
+
+		&:hover{
+			background-color: rgba(black, .05);
+		}
+	}
+}
+
+section{
+	padding: 4vmax 0;
+}
+
+.row.flex{
+	justify-content: center;
+
+	& .col{
+		margin-bottom: v.$gutter-width;
+	}
+}
+
+$position: 5vw;
+
+.fab{
+	position: fixed;
+	z-index: 10;
+	bottom: $position;
+	right: $position;
+	background-color: v.$primary;
+	color: v.$secondary;
+	display: inline-flex;
+	width: 4.5rem;
+	height: 4.5rem;
+	justify-content: center;
+	align-items: center;
+	text-decoration: none;
+	border-radius: 50%;
+	font-size: 32px;
+	transition: opacity .4s, transform .4s;
+	pointer-events: none;
+	transform: translateY(30%);
+	opacity: 0;
+	box-shadow: 0 6px 20px rgba(black, .1);
+
+	&.visible{
+		opacity: 1;
+		transform: none;
+		pointer-events: all;
+	}
+
+	&:before{
+		transition: transform .2s cubic-bezier(.5,-0.37,.52,1.3);
+	}
+
+	&:hover{
+		&:before{
+			transform: scale(1.5);
+		}
+	}
+}
+
+.section-content{
+	@media(max-width: 650px){
+		padding-top: 150px;
+		margin-top: -100px;
+	}
+}

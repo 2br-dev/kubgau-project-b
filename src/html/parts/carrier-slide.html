@@ -1,0 +1,28 @@
+<div class="swiper-slide">
+	<div class="container hide-l-down">
+		<div class="row flex vcenter">
+			<div class="col l5">
+				@@if(id==1){
+					<h2>Карьера после службы</h2>
+				}
+				@@if(id!=1){
+					<p class="h2">Карьера после службы</p>
+				}
+				<h3>@@name</h3>
+				<p class="description">@@description</p>
+				@@if(context.points){
+					<dl>
+						@@for(i=0; i<points.length; i++){
+							<dt>` + points[i] + `</dt>
+						}
+					</dl>
+				}
+			</div>
+			<div class="col l6 offset-l1">
+				<div class="img-wrapper">
+					<img data-src="./project-b/img/slides/slide-@@image1_5x.webp" alt="Изображение к слайду «@@name»" class="lazy">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

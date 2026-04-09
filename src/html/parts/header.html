@@ -1,0 +1,22 @@
+<header>
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				<nav>
+					<a href="#top" class="logo-wrapper">
+						<img src="./project-b/img/kubgau-logo.svg" alt="" class="logo-main">
+						<img src="./project-b/img/poisk.svg" alt="" class="logo-poisk">
+					</a>
+					<ul>
+						@@include('./navigation.html')
+						<li><a href="#mobile-menu" class="icon i-menu sidenav-trigger"></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<ul class="sidenav" id="mobile-menu">
+	<li><a href="#top">Наверх</a></li>
+	@@include('./navigation.html')
+</ul>

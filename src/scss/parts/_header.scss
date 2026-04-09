@@ -1,0 +1,107 @@
+@use './vars' as v;
+
+body{
+	padding-top: 4vmax;
+
+	@media(max-width: 850px){
+		padding-top: 0;
+	}
+}
+
+header{
+	top: 0;
+	background-color: rgba(#fff, .7);
+	backdrop-filter: blur(10px);
+	position: relative;
+	position: sticky;
+	padding: 10px 0;
+	z-index: 20;
+
+	&:after{
+		content: '';
+		display: block;
+		pointer-events: none;
+		position: absolute;
+		z-index: 1;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		height: 200%;
+		background-image: linear-gradient(to bottom, #00000005, #00000000);
+	}
+
+	& .container{
+
+		& .row{
+			margin: 0;
+		}
+	
+		& nav{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+
+			& .logo-wrapper{
+				display: flex;
+				gap: 20px;
+
+				& img{
+					height: 45px;
+
+					@media(max-width: 450px){
+						&.logo-poisk{
+							display: none;
+						}
+					}
+				}
+			}
+
+			& ul{
+				padding: 0;
+				margin: 0;
+				display: flex;
+
+				& li{
+					list-style: none;
+				}
+
+				& a{
+					line-height: 2.6rem;
+					display: inline-block;
+					text-decoration: none;
+					padding: 0 .5em;
+					transition: background-color .2s;
+					border-radius: 6px;
+					color: v.$text;
+
+					&:hover{
+						background-color: rgba(black, .05);
+					}
+
+					&.sidenav-trigger{
+
+						font-size: 32px;
+						padding: 0;
+
+						@media(min-width: 900px){
+							display: none;
+						}
+					}
+					
+					&:not(.sidenav-trigger){
+						@media(max-width: 900px){
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.sidenav{
+
+	& a{
+		text-decoration: none;
+	}
+}

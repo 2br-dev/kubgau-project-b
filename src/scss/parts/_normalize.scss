@@ -1,0 +1,10 @@
+body {
+	margin: 0;
+	interpolate-size: allow-keywords; // Для Chrome 129+
+
+	& img{
+		display: block;
+		max-width: 100%;
+		height: auto;
+	}
+}

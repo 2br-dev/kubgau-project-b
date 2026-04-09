@@ -1,0 +1,22 @@
+<section id="carrier">
+	<div class="section-content">
+		<div class="swiper desktop-slider" id="carrier-slider">
+			<div class="swiper-wrapper">
+				@@loop('../carrier-slide.html', './data/carrier.json')
+			</div>
+		</div>
+		<div class="navigation">
+			<a href="#!" class="carrier-prev icon i-arrow-left"></a>
+			<a href="#!" class="carrier-next icon i-arrow-right"></a>
+		</div>
+		<span class="fractions"></span>
+		<div class="mobile-accordion container">
+			<div class="row">
+				<div class="col">
+					<h2>Карьера после службы</h2>
+					@@loop('../mobile-carrier-slide.html', './data/carrier.json')
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

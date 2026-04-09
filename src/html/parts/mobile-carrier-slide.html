@@ -1,0 +1,17 @@
+<details @@if(id==1){open}>
+	<summary>
+		<h3>@@name</h3>
+		<i class="icon i-chevron-down"></i>
+	</summary>
+	<div class="summary-content">
+		<img data-src="./project-b/img/slides/slide-@@image1_5x.webp" alt="Изображение к слайду «@@name»" class="lazy">
+		<p class="description">@@description</p>
+		@@if(context.points){
+			<ul>
+				@@for(i=0; i<points.length; i++){
+					<li>` + points[i] + `</li>
+				}
+			</ul>
+		}
+	</div>
+</details>
