@@ -280,6 +280,11 @@ section{
 
 			& p{
 				font-size: clamp(16px, 2vw, 18px);
+
+				&.note{
+					color: v.$fogged;
+					font-size: clamp(14px, 1.2vw, 16px);
+				}
 			}
 
 			& img{
@@ -287,6 +292,13 @@ section{
 				margin: auto;
 				width: 50%;
 			}
+		}
+
+		& .divider{
+			border-top: 1px solid #ccc;
+			width: 40%;
+			margin: 1rem 0;
+			margin: auto;
 		}
 	}
 
@@ -325,6 +337,15 @@ section{
 
 		& .row, & .col{
 			margin: 0;
+
+			& a{
+				color: v.$text;
+				text-decoration: none;
+
+				&:hover{
+					color: v.$primary;
+				}
+			}
 		}
 
 		& .map-wrapper{

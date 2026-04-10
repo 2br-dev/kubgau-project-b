@@ -229,10 +229,20 @@ section#univercity .possibility-card {
 section#univercity .possibility-card p {
   font-size: clamp(16px, 2vw, 18px);
 }
+section#univercity .possibility-card p.note {
+  color: #777;
+  font-size: clamp(14px, 1.2vw, 16px);
+}
 section#univercity .possibility-card img {
   border-radius: 50%;
   margin: auto;
   width: 50%;
+}
+section#univercity .divider {
+  border-top: 1px solid #ccc;
+  width: 40%;
+  margin: 1rem 0;
+  margin: auto;
 }
 section#government h2 {
   text-align: center;
@@ -263,6 +273,13 @@ section#contacts {
 }
 section#contacts .row, section#contacts .col {
   margin: 0;
+}
+section#contacts .row a, section#contacts .col a {
+  color: #333;
+  text-decoration: none;
+}
+section#contacts .row a:hover, section#contacts .col a:hover {
+  color: #9DD800;
 }
 section#contacts .map-wrapper {
   aspect-ratio: 1/1;
